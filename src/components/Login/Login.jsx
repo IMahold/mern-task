@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./login.css";
 
 export default function Login() {
+  // Storing the username and password in an array
+  const data = [{ username: "Igor" }, { password: "123456wW" }];
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -10,6 +13,8 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // I was trying to store the data in localstorage, but apparently i am missing something
 
     if (
       username.current.value === "Igor" &&
