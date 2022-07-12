@@ -32,7 +32,7 @@ export default function Register() {
               onChange={(e) => setUsername(e.target.value)}
               type="text"
               placeholder="username"
-              pattern="[a-zA-Z0-9._]"
+              pattern="^[A-Za-z]\\w{5, 29}$"
               required
             />
           </div>

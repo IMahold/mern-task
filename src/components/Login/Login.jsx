@@ -11,7 +11,13 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // if(username.current.value === "igor" && password.current.value)
+    if (
+      username.current.value === "Igor" &&
+      password.current.value === "123456wW"
+    ) {
+      localStorage.setItem("UsernameData", "Igor");
+      localStorage.setItem("PasswordData", "123456wW");
+    }
   };
   return (
     <div className="login-container">
@@ -25,7 +31,7 @@ export default function Login() {
               onChange={(e) => setUsername(e.target.value)}
               type="text"
               placeholder="username"
-              pattern="[a-zA-Z0-9._]"
+              pattern="^[A-Za-z]\\w{5, 29}$"
               required
             />
           </div>
