@@ -1,0 +1,10 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+}
+
+.register-form {
+  margin-top: 200px;
+  width: 400px;
+  /* background-color: aqua; */
+}
