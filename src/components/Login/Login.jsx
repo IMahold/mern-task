@@ -36,17 +36,15 @@ export default function Login() {
     const userData = database.find((user) => user.username === uname.value);
 
     //Compare user info
-
     if (userData) {
       if (userData.password !== pass.value) {
-        //Invalid password
+        // Invalid password
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
         setIsSubmitted(true);
       }
     } else {
-      //Username not found
-
+      // Username not found
       setErrorMessages({ name: "uname", message: errors.uname });
     }
   };
