@@ -21,12 +21,6 @@ export default function Login() {
   console.log("username is", username);
   console.log("password is", password);
 
-  const renderErrorMessage = (name) => {
-    name === errorMessages.name && (
-      <div className="error">{errorMessages.message}</div>
-    );
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -48,6 +42,13 @@ export default function Login() {
       setErrorMessages({ name: "uname", message: errors.uname });
     }
   };
+
+  const renderErrorMessage = (name) => {
+    name === errorMessages.name && (
+      <div className="error">{errorMessages.message}</div>
+    );
+  };
+
   return (
     <div className="login-container">
       <div className="login-form">
